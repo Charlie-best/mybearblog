@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <article>
+        <h1>{{ post.title }}</h1>
+        <p><em>发布于: {{ post.date }}</em></p>
+        <hr>
+        <div>
+            {{ post.content | safe }}
+        </div>
+    </article>
+{% endblock %}

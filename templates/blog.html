@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Blog</h1>
+    <ul style="list-style-type: none; padding: 0;">
+        {% for post in posts %}
+            <li style="margin-bottom: 20px;">
+                <a href="/posts/{{ post.slug }}.html" style="font-size: 1.2em;">{{ post.title }}</a>
+                <p style="margin: 5px 0 0 0; font-family: var(--font-main);">{{ post.date }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
